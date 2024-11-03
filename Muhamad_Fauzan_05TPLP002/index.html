@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- css -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <title>Dashboard Karyawan</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar fixed-top navbar-light bg-info p-1">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="Logo Unpam.jpg" alt="" width="40" class="logo-img d-inline-block align-text-top" />
+          Universitas Pamulang
+        </a>
+        <form class="form-inline my-2 my-lg-0 ml-auto">
+          <img src="Yowaimo.jpeg" alt="Logo" width="35" class="navbar-img logo-img" />
+        </form>
+      </div>
+    </nav>
+    <!-- Sidebar -->
+    <div class="row no-gutters mt-5" id="home" style="height: 150vh">
+      <div class="sidebar col-md-2 mt-2 bg-dark px-4" style="height: 150vh">
+        <div class="profile-section text-center text-white mt-4">
+          <img src="Yowaimo.jpeg" alt="Profile Picture" class="img-fluid rounded-circle" width="80" />
+          <h5 class="mt-2">Muhammad Fauzan</h5>
+          <p>Administrator</p>
+        </div>
+
+        <ul class="nav flex-column mt-4">
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="index.html"><i class="bi bi-house-add me-2"></i>Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">MENU KARYAWAN</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="karyawan.html" onclick="loadKaryawan()"><i class="bi bi-people me-2"></i>Karyawan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="jabatan.html"><i class="bi bi-person-fill-add me-2"></i>Jabatan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="divisi.html"><i class="bi bi-building-fill-add me-2"></i>Divisi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">MENU ABSENSI</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="Absensi.html"><i class="bi bi-calendar2-check-fill me-2"></i>Absensi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="Izin.html"><i class="bi bi-calendar-plus me-2"></i>Izin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="Daftar lembur.html"><i class="bi bi-calendar-plus me-2"></i>Lembur</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">MENU GAJI</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="slip_gaji.html"><i class="bi bi-cash-coin me-2"></i>Slip Gaji</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Forms Tambah Data</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="formkaryawan.html"><i class="bi bi-people me-2"></i>Input Karyawan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">KELUAR WEB</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="logout.html"><i class="bi bi-door-open me-2"></i>Logout</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-10 p-4 pt-3" id="content">
+        <h3>Sistem Informasi Manajemen Karyawan</h3>
+        <h5>Admin Dashboard</h5>
+        <hr />
+        <div class="row text-white">
+          <!-- Card 1 -->
+          <div class="col-md-3 mb-4">
+            <div class="card bg-info">
+              <div class="card-body">
+                <div class="card-body-icon">
+                  <i class="bi bi-people me-2"></i>
+                </div>
+                <h5 class="card-title">Data Pegawai</h5>
+                <div class="display-4">13</div>
+                <a href="data_pegawai.html"><p class="card-text text-white">Lihat Detail <i class="bi bi-indent ml-2"></i></p></a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-md-3 mb-4">
+            <div class="card bg-success">
+              <div class="card-body">
+                <div class="card-body-icon">
+                  <i class="bi bi-calendar2-check-fill me-2"></i>
+                </div>
+                <h5 class="card-title">Absensi Hari Ini</h5>
+                <div class="display-4">0</div>
+                <a href="absensi_hari_ini.html"><p class="card-text text-white">Lihat Detail <i class="bi bi-indent ml-2"></i></p></a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-md-3 mb-4">
+            <div class="card bg-primary">
+              <div class="card-body">
+                <div class="card-body-icon">
+                  <i class="bi bi-check-circle"></i>
+                </div>
+                <h5 class="card-title">Izin Menunggu Konfirmasi</h5>
+                <div class="display-4">2</div>
+                <a href="izin_konfirmasi.html"><p class="card-text text-white">Lihat Detail <i class="bi bi-indent ml-2"></i></p></a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="col-md-3 mb-4">
+            <div class="card bg-warning">
+              <div class="card-body">
+                <div class="card-body-icon">
+                  <i class="bi bi-check-circle"></i>
+                </div>
+                <h5 class="card-title">Lembur Menunggu Konfirmasi</h5>
+                <div class="display-4">1</div>
+                <a href="lembur_konfirmasi.html"><p class="card-text text-white">Lihat Detail <i class="bi bi-indent ml-2"></i></p></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="karyawan-content"></div> <!-- Div untuk menampilkan konten karyawan -->
+      </div>
+    </div>
+    <!-- end navbar -->
+
+    <script>
+      function loadKaryawan() {
+        fetch('karyawan.html')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('karyawan-content').innerHTML = data;
+          })
+          .catch(error => console.error('Error loading karyawan.html:', error));
+      }
+    </script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

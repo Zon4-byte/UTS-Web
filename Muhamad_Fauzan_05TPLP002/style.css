@@ -1,0 +1,61 @@
+.sidebar {
+    height: 100vh;
+  }
+  .nav-link i {
+    margin-right: 8px; /* Adjust the spacing as needed */
+  }
+  
+  .display-4 {
+    font-weight: bold;
+  }
+  
+  .card-body-icon {
+    position: absolute;
+    z-index: 0;
+    top: 25px;
+    right: 4px;
+    opacity: 0.4;
+    font-size: 80px;
+  }
+  
+  .navbar .nav-link,
+  .navbar .dropdown-item {
+    color: black !important;
+  }
+  
+  #lembur {
+    background-color: #9c8093;
+  }
+  #dashboard {
+    background-color: #876aa1;
+  }
+  
+  #divisi {
+    background-color: rgb(127, 192, 192);
+  }
+  
+  #home {
+    background-color: blanchedalmond;
+  }
+  
+  .profile-section {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .profile-section img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  .profile-section h5 {
+    margin-bottom: 0;
+    font-size: 16px;
+  }
+  .profile-section p {
+    font-size: 14px;
+    color: #cfcfcf;
+  }
+  
